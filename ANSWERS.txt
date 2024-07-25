@@ -1,0 +1,229 @@
+PYTHON BASICS
+
+What is Python, and what are some of its key features that make it popular among developers? Provide examples of use cases where Python is particularly effective.
+
+    Python is a high-level, interpreted programming language known for its simplicity.
+
+    Key Python Features:
+        1. Readability and simplicity
+        2.Dynamically typed: One does not have to declare the type of variable
+        3. Versatile
+        4. Extensive libraries
+
+    Use Cases:
+        1. Web Development: Using frameworks such as Django
+        2. Data Analysis: Using libraries like Pandas
+        3. Game Development: Using libraries like Pygame
+
+
+INSTALLING PYTHON
+
+Describe the steps to install Python on your operating system (Windows, macOS, or Linux). Include how to verify the installation and set up a virtual environment.
+
+On Ubuntu 22.04:
+    1. Install Python
+
+            sudo apt update
+            sudo apt install python3
+            sudo apt install python3-pip
+    
+    2. Verify installation
+
+            python3 --version
+            pip3 --version
+
+    3. Set up a virtual environment
+
+        sudo apt install python3-venv
+        python3 -m venv myenv
+        source myenv/bin/activate
+
+
+
+PYTHON SYNTAX AND SEMANTICS
+
+Write a simple Python program that prints "Hello, World!" to the console. Explain the basic syntax elements used in the program.
+
+code: 
+    print("Hello World!")
+
+print - is a built-in function
+Hello World! -  is a string data type enclosed in double quotes.
+
+
+DATA TYPES AND VARIABLES
+
+List and describe the basic data types in Python. Write a short script that demonstrates how to create and use variables of different data types.
+
+    Basic data types:
+        int: Integer eg, 1,2,4
+        float: floating-point numbers e.g, 2.3, 6.8
+        str: string eg., "hello"
+        bool: Boolean eg., True, False
+        list: ordered, mutable collection eg., [2,3,4,5]
+        tuple: ordered, immutable collection eg., (4,5.6)
+        dict: unordered collection of key-value pairs eg., {"a":2, "b":4}
+    
+    Script
+
+        # Integer
+        a = 10
+        print(a)
+
+        # Float
+        b = 10.5
+        print(b)
+
+        # String
+        c = "Hello"
+        print(c)
+
+        # Boolean
+        d = True
+        print(d)
+
+        # List
+        e = [1, 2, 3]
+        print(e)
+
+        # Tuple
+        f = (1, 2, 3)
+        print(f)
+
+        # Dictionary
+        g = {"name": "Alice", "age": 25}
+        print(g)
+
+
+CONTROL STRUCTURES
+
+Explain the use of conditional statements and loops in Python. Provide examples of an if-else statement and a for loop.
+
+    Conditional Statements allows one to execute code until the defined condition is met. 
+    e.g., if-else statement
+
+    Loops allows one to iterate over a sequence of elements.
+    e.g., for loop
+
+    Script:
+        #Control Structures
+        #if-else statements
+
+        x = 4
+        if x < 10 :
+            print(x, " is less than 10")
+        else:
+            print(x, " is larger than 10")
+
+        # for-loop
+
+        students = ['Bob', 'Mike', 'Lesly', 'Kim', 'Sean', 'Njoroge']
+        for student in students:
+            print(student)
+
+
+FUNCIONS IN PYTHON
+
+What are functions in Python, and why are they useful? Write a Python function that takes two arguments and returns their sum. Include an example of how to call this function.
+
+    Functions are reusable blocks of code that perform a specific task.
+    Functions help in code organization and reduce data redundancy
+
+    Script:
+        # Functions
+        def sum(a, b):
+            return a + b
+
+        #calling the function
+        print(sum(10, 67))
+        print(sum(90, 34))
+
+LIST AND DICTIONARIES
+
+Describe the differences between lists and dictionaries in Python. Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
+
+    Lists are ordered collections of elements, indexed by position.
+    Dictionaries are unordered collection of key-value pairs, indexed by keys
+
+    Script 
+
+        #List and Dictionaries
+        #List
+        nums = [1,4,5,6,7,89,98]
+        print(nums[4]) #Accessing the fourth element
+        print(nums[6]) #Accessing the last element
+
+        #Dictionary
+        personas = {"Uno": "Juan", "Dos": "Jose", "Tres": "Maria", "Cuatro": "Miguel"}
+        print(personas["Tres"]) # Accessing values by key
+        personas["cinco"] = "Ariella" #Adding a key-value pair
+        print(personas)
+
+
+EXCEPTION HANDLING
+
+What is exception handling in Python? Provide an example of how to use try, except, and finally blocks to handle errors in a Python script.
+
+    Exception handling is a way to handle errors gracefully without stopping the execution of the program
+
+    Script
+
+         #Exception Handling
+        try:
+            input = input('Enter a number: ')
+            input = float(input) #Converts the str into float
+            result = 10 / input
+            
+            print("Result: ", result)
+
+        # Handles case where the user enters zero
+        except ZeroDivisionError:
+            print("Cannot divide by zero. Please enter a non-zero number.")
+
+        # Handles case where user enters a non-integer value
+        except ValueError:
+            print("Invalid input. Please enter a valid number")
+
+        # This block executes whether or not an exception occurred
+        finally:
+            print("Execution finished")
+
+
+MODULES AND PACKAGES
+
+Explain the concepts of modules and packages in Python. How can you import and use a module in your script? Provide an example using the math module
+
+    Modules are files containing Python code, for example, functions, classes, variables.
+    Packages are directories containing multiple modules
+
+    Example using `math` module
+
+    import math
+
+    print(math.sqrt(25)) #Using sqrt, square root, function from module
+
+
+FILE I/O
+
+How do you read from and write to files in Python? Write a script that reads the content of a file and prints it to the console, and another script that writes a list of strings to a file.
+
+    Reading from a file
+
+    with open("example.txt", "r") as file:
+        content = file.read()
+        print(content)
+
+
+    Writing to a file:
+
+    lines = ["Hello", "World", "Python"]
+
+    with open("output.txt", "w") as file:
+        for line in lines:
+            file.write(line + "\n")     
+
+
+REFERENCES
+https://www.w3schools.com/python/default.asp
+https://chat.openai.com/
+https://www.python.org/
